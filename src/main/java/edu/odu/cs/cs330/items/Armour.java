@@ -100,6 +100,7 @@ public class Armour extends Equippable {
         // Complete this function.
         cpy.setName(this.getName());
         cpy.setDurability(this.getDurability());
+        cpy.setDefense(this.getDefense());
         cpy.setMaterial(this.getMaterial());
         cpy.setModifier(this.getModifier());
         cpy.setModifierLevel(this.getModifierLevel());
@@ -146,10 +147,8 @@ public class Armour extends Equippable {
     {
         // Complete this function.
         // Remove the placeholder return
-        return this.getName().hashCode() + this.getMaterial().hashCode() + this.getModifier().hashCode()+this.getElement().hashCode();
-    }
-
-    /**
+        return this.getName().hashCode() + this.getMaterial().hashCode() + this.getModifier().hashCode()+this.getElement().hashCode(); }
+/**
      * *Print* one Armour.
      */
     @Override
@@ -158,8 +157,10 @@ public class Armour extends Equippable {
 
         // Complete this function... treat the return as a hint.
         return String.join(
-            System.lineSeparator(),
-            String.format("  Nme: %s", super.getName()),
+            System.lineSeparator(), String.format("  Nme: %s", super.getName()), String.format("  Dur: %d", this.getDurability()), String.format("  Def: %d", this.getDefense()),
+            String.format("  Mtl: %s", this.getMaterial()),
+            String.format("  Mdr: %s (Lvl %d)", this.getModifier(),this.getModifierLevel()),
+            String.format("  Emt: %s", this.getElement()),
             ""
         );
     }
