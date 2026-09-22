@@ -146,7 +146,7 @@ public class Armour extends Equippable {
     {
         // Complete this function.
         // Remove the placeholder return
-        return -1;
+        return this.getName().hashCode() + this.getMaterial().hashCode() + this.getModifier().hashCode()+this.getElement().hashCode();
     }
 
     /**
