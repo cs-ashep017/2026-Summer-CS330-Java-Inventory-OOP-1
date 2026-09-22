@@ -43,6 +43,13 @@ public class Armour extends Equippable {
     public Armour(Armour src)
     {
         // Complete this function.
+        super(src.getName());
+        this.durability = src.getDurability();
+        this.material = src.getMaterial();
+        this.modifier = src.getModifier();
+        this.modifierLevel = src.getModifierLevel();
+        this.element = src.getElement();
+        this.defense = src.getDefense();
     }
 
     /**
