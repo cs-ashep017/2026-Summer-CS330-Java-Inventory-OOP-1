@@ -81,6 +81,12 @@ public class Armour extends Equippable {
         super.name    = snr.next();
 
         // Complete this function.
+        super.material = snr.next();
+        super.durability = snr.nextInt();
+        this.defense = snr.nextInt();
+        super.modifier = snr.next();
+        super.modifierLevel = snr.nextInt();
+        super.element = snr.next();
     }
 
     /**
