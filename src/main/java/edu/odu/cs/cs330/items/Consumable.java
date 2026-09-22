@@ -148,7 +148,7 @@ public class Consumable extends Item {
      */
     @Override public int hashCode()
     { // Use the provided return as a start/hint
-        return this.name.hashCode();
+        return this.name.hashCode()+this.effect.hashCode();
     }
 
     /**
@@ -158,8 +158,7 @@ public class Consumable extends Item {
     public String toString()
     {
         // Complete this function... treat the return as a hint.
-        return String.join(
-            System.lineSeparator(),
+        return String.join( System.lineSeparator(),
             String.format("  Nme: %s", super.getName()),
             ""
         );
