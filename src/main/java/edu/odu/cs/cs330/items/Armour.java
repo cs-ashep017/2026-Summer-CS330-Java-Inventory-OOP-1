@@ -98,6 +98,13 @@ public class Armour extends Equippable {
         Armour cpy = new Armour();
 
         // Complete this function.
+        cpy.setName(this.getName());
+        cpy.setDurability(this.getDurability());
+        cpy.setMaterial(this.getMaterial());
+        cpy.setModifier(this.getModifier());
+        cpy.setModifierLevel(this.getModifierLevel());
+        cpy.setElement(this.getElement());
+
 
         return cpy;
     }
