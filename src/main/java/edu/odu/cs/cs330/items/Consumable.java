@@ -117,6 +117,9 @@ public class Consumable extends Item {
         Consumable cpy = new Consumable();
 
         // Complete this function.
+        cpy.setName(this.getName());
+        cpy.setEffect(this.getEffect());
+        cpy.setNumberOfUses(this.getNumberOfUses());
 
         return cpy;
     }
