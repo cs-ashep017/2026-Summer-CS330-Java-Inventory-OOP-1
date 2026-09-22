@@ -97,8 +97,7 @@ public class Consumable extends Item {
     }
 
     /**
-     * Read Consumable Item attributes.
-     */
+     * Read Consumable Item attributes.  */
     @Override
     public void read(Scanner snr)
     {
@@ -139,19 +138,16 @@ public class Consumable extends Item {
         Consumable rhsItem = (Consumable) rhs;
 
         // Use the provided return as a start/hint
-        return this.name.equals(rhsItem.name);
+        return this.name.equals(rhsItem.name) && this.effect.equals(rhsItem.effect);
     }
 
     /**
-     * Generate a hash code based on name and effect.
-     *
+     * Generate a hash code based on name and effect.  *
      * Add <code>name.hashCode()</code> and <code>effect.hashCode</code>, then
      * return the result.
      */
-    @Override
-    public int hashCode()
-    {
-        // Use the provided return as a start/hint
+    @Override public int hashCode()
+    { // Use the provided return as a start/hint
         return this.name.hashCode();
     }
 
