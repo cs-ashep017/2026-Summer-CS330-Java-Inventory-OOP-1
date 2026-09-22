@@ -126,7 +126,15 @@ public class Armour extends Equippable {
 
         // Complete this function.
         // Remove the placeholder return
+        if (this.getName().equals(rhsItem.getName()) &&
+                    this.getMaterial().equals(rhsItem.getMaterial()) &&
+                    this.getModifier().equals(rhsItem.getModifier()) &&
+                    this.getElement().equals(rhsItem.getElement()))
+        {
+            return true;
+        }
         return false;
+
     }
 
     /**
